@@ -6,7 +6,7 @@ function Car(make, model) {
 
 Car.prototype.getMakeModel=function(){
 		return `${this.make} ${this.model}`;
-	}
+	};
 
 function SportsCar(make, model, topSpeed) {
 	Car.call(this,model,topSpeed);
@@ -18,7 +18,11 @@ SportsCar.prototype.constructor=SportsCar;
 
 SportsCar.prototype.getTopSpeed=function(){
 		return this.topSpeed;
-	}
+	};
+
+const car = new SportsCar("Ferrari", "Testarossa", 200);
+car.getTopSpeed();
+car.getMakeModel();
 
 // Do not change the code below
 window.Car = Car;
